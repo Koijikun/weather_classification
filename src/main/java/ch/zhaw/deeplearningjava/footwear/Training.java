@@ -37,15 +37,8 @@ public final class Training {
         // weather_data128 trains with 128x128, weather_data trains with 32x32
         String datafolder = "weather_data128";
         ImageFolder dataset = initDataset(datafolder);
-        // Split the dataset set into training dataset and validate dataset
         RandomAccessDataset[] datasets = dataset.randomSplit(9, 1);
 
-        // set loss function, which seeks to minimize errors
-        // loss function evaluates model's predictions against the correct answer
-        // (during training)
-        // higher numbers are bad - means model performed poorly; indicates more errors;
-        // want to
-        // minimize errors (loss)
         Loss loss = Loss.softmaxCrossEntropyLoss();
 
         // setting training parameters (ie hyperparameters)

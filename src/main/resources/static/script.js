@@ -94,7 +94,7 @@ function checkFile2(files) {
 
 function displayAnswer(answerId, result) {
     let answerDiv = document.getElementById(answerId);
-    answerDiv.innerHTML = ""; // Clear previous content
+    answerDiv.innerHTML = "";
 
     let table = document.createElement("table");
     table.className = "table";
@@ -112,7 +112,7 @@ function displayAnswer(answerId, result) {
         let classNameCell = row.insertCell();
         classNameCell.textContent = item.className;
         let probabilityCell = row.insertCell();
-        probabilityCell.textContent = item.probability.toFixed(2); // Round probability to 2 decimal places
+        probabilityCell.textContent = item.probability.toFixed(2);
     });
 
     answerDiv.appendChild(table);
